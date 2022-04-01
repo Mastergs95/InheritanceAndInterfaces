@@ -4,10 +4,18 @@ package com.skillsoft.inheritandinterfaces;
 public class Main {
     public static void main(String [] args){
 
-        Measure measure=new Measure();
+        SmartSpeaker smartSpeaker=new SmartSpeaker("Google Nest");
+        AlexaEnabledSpeaker alexaEnabledSpeaker=new AlexaEnabledSpeaker("Amazon Echo");
+        AmazonEcho amazonEcho= new AmazonEcho();
+        AppleHomePod appleHomePod = new AppleHomePod();
 
-        System.out.println("Perimeter of rectangle in cm: " + measure.perimeter(4,3));
-        System.out.println("Perimeter of rectangle in cm: " + measure.area(4,3));
+        printWakePhrase(amazonEcho);
+        printWakePhrase(appleHomePod);
 
+
+
+    }
+    private static void printWakePhrase(SmartSpeaker speaker){
+        speaker.wakePhrase();
     }
 }
